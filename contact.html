@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <title>janmat party</title>
+</head>
+<body>
+     <h1 id="first">Anjani devi mandal - सचिवालय</h1>
+    <nav class="navigation max-width-1 m-auto">
+        <div class="nav-left">
+            <a href="/">
+                <img src="img/logo.png" width="94px" alt="">
+            </a>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="janmat.html">Janmat party</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="jan.html">घोषणा-पत्र</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            
+                <input class="form-input" type="text" name="query" placeholder="janmat party">
+                <button class="btn">Search</button>
+            
+
+        </div>
+
+    </nav>
+    <div class="max-width-1 m-auto">
+        <hr>
+    </div>
+
+    <div class="contact-content font1 max-width-1 m-auto">
+        <div class="max-width-1 m-auto mx-1">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <fieldset>janmat party</fieldset>
+            <h2> Free to Contact Us</h2>
+            <div class="contact-form">
+                <div class="form-box">
+                    <input type="text" id="NAME" placeholder="Enter Your Name" required>
+                </div>
+                <div class="form-box">
+                    <input type="text" id="phone" placeholder="Enter Your Phone Number" required>
+                </div>
+                <div class="form-box">
+                    <input type="text" id="email" placeholder="Enter Your Email Id"email" required>
+                </div>
+                <div class="form-box">
+                    <textarea name="" id="" cols="20" rows="5" placeholder="How may we help you?" id="text" required ></textarea>
+                </div>
+                <div class="form-box">
+                    <button class="btn" id="send">Submit</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+ 
+
+   
+</form>
+    <div class="footer">
+        <p>Copyright &copy;janmat party </p>
+         <a href="https://www.facebook.com/anjanidevimandal45">Anjani devi mandal</a> 
+    </div>
+<sccript src="https://smtpjs.com/v3/smtp.js"></sccript>
+<script>
+ function sendEmail(){
+    Email.send({
+    Host : "smtp.gmail.com",
+    Username : "langgammer645@gmail.com",
+    Password : "jaymadhesh",
+    To : 'anjanidevimandal@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "This is the subject",
+    Body : "Name : " + document.getElementById("NAME").value
+    + "<br> phone no: " + document.getElementById("phone").value
+    + "<br> : Email :" + document.getElementById("email").value
+    + "<br> help message : " + document.getElementById("text").value
+}).then(
+  message => alert("messaage sent succesfully")
+);
+
+
+ }
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
